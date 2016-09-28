@@ -13,6 +13,14 @@ public class MidiAssetImporter : AssetPostprocessor
 			if(extension.Equals(".mid") == true)
 			{
 				// Create Midi Asset
+				MidiAsset createdAsset = ScriptableObject.CreateInstance<MidiAsset>();
+
+				string newFileName = Path.ChangeExtension(asset, ".asset");
+				// Load Midi data
+				createdAsset.FileLoad(asset);
+
+				AssetDatabase.CreateAsset(createdAsset, newFileName);
+				AssetDatabase.SaveAssets();
 			}
 		}
 	}
