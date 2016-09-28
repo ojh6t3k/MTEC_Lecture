@@ -24,11 +24,11 @@ public class MidiAssetEditor : Editor
 		if(_foldout == true)
 		{
 			EditorGUI.indentLevel++;
-			GUILayout.Label(string.Format("PPQN: {0:d}", midiAsset.PPQN));
-			GUILayout.Label(string.Format("Pulse: {0:f} sec", midiAsset.pulseTime));
-			GUILayout.Label(string.Format("BPM: {0:d}", midiAsset.BPM));
-			GUILayout.Label(string.Format("Nemerator: {0:d}", midiAsset.numerator));
-			GUILayout.Label(string.Format("Denominator: {0:d}", midiAsset.denominator));
+			EditorGUILayout.LabelField(string.Format("PPQN: {0:d}", midiAsset.PPQN));
+			EditorGUILayout.LabelField(string.Format("Pulse: {0:f} sec", midiAsset.pulseTime));
+			EditorGUILayout.LabelField(string.Format("BPM: {0:d}", midiAsset.BPM));
+			EditorGUILayout.LabelField(string.Format("Nemerator: {0:d}", midiAsset.numerator));
+			EditorGUILayout.LabelField(string.Format("Denominator: {0:d}", midiAsset.denominator));
 			EditorGUI.indentLevel--;
 		}
 
