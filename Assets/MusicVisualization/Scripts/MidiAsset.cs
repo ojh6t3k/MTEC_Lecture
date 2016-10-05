@@ -66,4 +66,12 @@ public class MidiAsset : ScriptableObject
 			return (int)(60000000f / _midiFile.Time.Tempo);
 		}
 	}
+
+	public MidiTrack[] tracks
+	{
+		get
+		{
+			return _midiFile.Tracks.ToArray();
+		}
+	}
 }

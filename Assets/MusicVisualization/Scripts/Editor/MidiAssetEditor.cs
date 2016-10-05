@@ -34,7 +34,7 @@ public class MidiAssetEditor : Editor
 
 		if(GUILayout.Button("Track Viewer") == true)
 		{
-			MidiTrackWindow.ShowWindow();
+			MidiTrackWindow.ShowWindow(midiAsset);
 		}
 	}
 }
