@@ -40,7 +40,7 @@ public class MidiTrackWindow : EditorWindow
 		GUI.EndGroup();
 
 		// Draw Musical Scale Area
-		rect = new Rect(0, titleHeight, musicalScaleWidth, position.height - titleHeight);
+		rect = new Rect(0, titleHeight + timeHeight, musicalScaleWidth, position.height - titleHeight);
 		GUI.Box(rect, "");
 		GUI.BeginGroup(rect);
 		DrawMusicalScaleArea(rect.width, rect.height);
@@ -83,8 +83,12 @@ public class MidiTrackWindow : EditorWindow
 		GUIStyle style = new GUIStyle(GUI.skin.label);
 		style.alignment = TextAnchor.MiddleCenter;
 
-		Rect rect2 = new Rect(0, 0, width, GridY);
-		for(int i = 0; i < 128; i++)
+		int sNote = (int)(_noteAreaScroll.y / GridY);
+		int eNote = (int)((_noteAreaScroll.y + height) / GridY);
+		float sY = -(_noteAreaScroll.y % GridY);
+		Rect rect2 = new Rect(0, sY, width, GridY);
+
+		for(int i = sNote; i <= eNote; i++)
 		{
 			GUI.Box(rect2, "");
 			GUI.Label(rect2, NoteNumberToString(i), style);
@@ -111,6 +115,30 @@ public class MidiTrackWindow : EditorWindow
 
 	void DrawTimeArea(float width, float height)
 	{
+		Rect areaRect = new Rect(0, 0, width, height);
+		int sTime = (int)(_noteAreaScroll.x / GridX);
+		int eTime = (int)((_noteAreaScroll.x + width) / GridX);
+
+		// Draw Text Area
+		GUIStyle style = new GUIStyle(GUI.skin.label);
+		style.alignment = TextAnchor.MiddleLeft;
+		int sText = (int)(sTime / 100);
+		int eText = (int)(eTime / 100);
+		float sTextW = GridX * 100;
+		float sTextH = height * 0.4f;
+		float sTextX = -(_noteAreaScroll.x % sTextW);
+		Rect textRect = new Rect(sTextX, 0, sTextW, sTextH);
+		for(int i = sText; i <= eText; i++)
+		{
+			GUI.Label(textRect, string.Format("{0:f1}", i * 0.1f), style);
+			textRect.x += sTextW;
+		}
+
+		// Draw Line Area
+		Rect lineRect = new Rect(0, 0, GridX * 10, height * 0.6f);
+		for(int i = sTime; i <= eTime; i++)
+		{
+		}
 	}
 
 	void DrawNoteArea(float width, float height)
