@@ -124,20 +124,49 @@ public class MidiTrackWindow : EditorWindow
 		style.alignment = TextAnchor.MiddleLeft;
 		int sText = (int)(sTime / 100);
 		int eText = (int)(eTime / 100);
-		float sTextW = GridX * 100;
-		float sTextH = height * 0.4f;
-		float sTextX = -(_noteAreaScroll.x % sTextW);
-		Rect textRect = new Rect(sTextX, 0, sTextW, sTextH);
+		float textW = GridX * 100;
+		float textH = height * 0.4f;
+		float sTextX = -(_noteAreaScroll.x % textW);
+		Rect textRect = new Rect(sTextX, 0, textW, textH);
 		for(int i = sText; i <= eText; i++)
 		{
 			GUI.Label(textRect, string.Format("{0:f1}", i * 0.1f), style);
-			textRect.x += sTextW;
+			textRect.x += textW;
 		}
 
 		// Draw Line Area
-		Rect lineRect = new Rect(0, 0, GridX * 10, height * 0.6f);
-		for(int i = sTime; i <= eTime; i++)
+		int sLine = (int)(sTime / 10);
+		int eLine = (int)(eTime / 10);
+		float lineW = GridX * 10;
+		float lineH = height - textH;
+		float sLineX = -(_noteAreaScroll.x % lineW);
+		Texture2D lineTexture = new Texture2D(1, 1);
+		lineTexture.SetPixel(0, 0, Color.black);
+		lineTexture.Apply();
+		Rect pixelRect = new Rect(0, 0, 1, 1);
+		int longLineY = (int)textH;
+		int shortLineY = (int)(longLineY + lineH * 0.5f);
+		int eLineY = (int)height;
+		for(int i = sLine; i <= eLine; i++)
 		{
+			pixelRect.x = sLineX;
+			if((i % 10) == 0) // Long Line
+			{
+				for(int j = longLineY; j <= eLineY; j++)
+				{
+					pixelRect.y = j;
+					GUI.DrawTexture(pixelRect, lineTexture);
+				}
+			}
+			else // Short Line
+			{
+				for(int j = shortLineY; j <= eLineY; j++)
+				{
+					pixelRect.y = j;
+					GUI.DrawTexture(pixelRect, lineTexture);
+				}
+			}
+			sLineX += lineW;
 		}
 	}
 
