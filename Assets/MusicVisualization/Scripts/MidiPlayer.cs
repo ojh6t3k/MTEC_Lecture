@@ -52,7 +52,8 @@ public class MidiPlayer : MonoBehaviour
 				_playTime += (Time.deltaTime * playSpeed);
 				for(int i=0; i<_tracks.Length; i++)
 				{
-					for(int j = _noteIndex[i]; j < _tracks[i].Number; j++)
+					int noteCount = _tracks[i].Notes.Count;
+					for(int j = _noteIndex[i]; j < noteCount; j++)
 					{
 						MidiNote note = _tracks[i].Notes[j];
 						float sTime = note.StartTime * _pulseTime;
@@ -60,15 +61,14 @@ public class MidiPlayer : MonoBehaviour
 
 						if(_playTime < sTime)
 							break;
-						else if(_playTime >= sTime && _playTime <= sTime)
+
+						// Midi Event Trigger Call
+						foreach(MidiEventTrigger trigger in _triggers)
 						{
-							// Midi Event Trigger Call
-							foreach(MidiEventTrigger trigger in _triggers)
-							{
-								trigger.NoteOn(_tracks[i].Instrument, note.Number);
-							}
+							trigger.NoteOn(_tracks[i].Instrument, note.Number);
 						}
-						else if(_playTime > eTime)
+
+						if(_playTime > eTime)
 						{
 							_noteIndex[i] = j + 1;
 
