@@ -19,6 +19,7 @@ public class MidiPlayer : MonoBehaviour
 	private MidiTrack[] _tracks;
 	private int[] _noteIndex;
 	private float _pulseTime;
+	private MidiEventTrigger[] _triggers;
 
 
 	// Use this for initialization
@@ -59,9 +60,24 @@ public class MidiPlayer : MonoBehaviour
 
 						if(_playTime < sTime)
 							break;
-
-						if(_playTime > eTime)
+						else if(_playTime >= sTime && _playTime <= sTime)
+						{
+							// Midi Event Trigger Call
+							foreach(MidiEventTrigger trigger in _triggers)
+							{
+								trigger.NoteOn(_tracks[i].Instrument, note.Number);
+							}
+						}
+						else if(_playTime > eTime)
+						{
 							_noteIndex[i] = j + 1;
+
+							// Midi Event Trigger Call
+							foreach(MidiEventTrigger trigger in _triggers)
+							{
+								trigger.NoteOff(_tracks[i].Instrument, note.Number);
+							}
+						}
 					}
 				}
 			}
@@ -100,6 +116,15 @@ public class MidiPlayer : MonoBehaviour
 		_noteIndex = new int[_tracks.Length];
 		for(int i = 0; i < _noteIndex.Length; i++)
 			_noteIndex[i] = 0;
+
+		// Find Midi Event Trigger
+		_triggers = GameObject.FindObjectsOfType<MidiEventTrigger>();
+
+		// Midi Event Trigger Call
+		foreach(MidiEventTrigger trigger in _triggers)
+		{
+			trigger.Play();
+		}
 	}
 
 	public void Pause()
@@ -108,6 +133,12 @@ public class MidiPlayer : MonoBehaviour
 
 		if(audioSource != null)
 			audioSource.Pause();
+
+		// Midi Event Trigger Call
+		foreach(MidiEventTrigger trigger in _triggers)
+		{
+			trigger.Pause();
+		}
 	}
 
 	public void Resume()
@@ -116,6 +147,12 @@ public class MidiPlayer : MonoBehaviour
 
 		if(audioSource != null)
 			audioSource.UnPause();
+
+		// Midi Event Trigger Call
+		foreach(MidiEventTrigger trigger in _triggers)
+		{
+			trigger.Resume();
+		}
 	}
 
 	public void Stop()
@@ -126,6 +163,12 @@ public class MidiPlayer : MonoBehaviour
 
 		if(audioSource != null)
 			audioSource.Stop();
+
+		// Midi Event Trigger Call
+		foreach(MidiEventTrigger trigger in _triggers)
+		{
+			trigger.Stop();
+		}
 	}
 
 	public bool isPlaying
