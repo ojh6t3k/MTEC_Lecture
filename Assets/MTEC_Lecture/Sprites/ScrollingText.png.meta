@@ -1,51 +1,51 @@
 fileFormatVersion: 2
 guid: aadd163a1083b694cb476d64aa66c8a2
-timeCreated: 1473342866
-licenseType: Pro
+timeCreated: 1489067637
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ScrollingText_0
-    21300002: ScrollingText_1
-    21300004: ScrollingText_2
-    21300006: ScrollingText_3
-    21300008: ScrollingText_4
-    21300010: ScrollingText_5
-    21300012: ScrollingText_6
-    21300014: ScrollingText_7
-    21300016: ScrollingText_8
-    21300018: ScrollingText_9
-    21300020: ScrollingText_10
-    21300022: ScrollingText_11
-    21300024: ScrollingText_12
-    21300026: ScrollingText_13
-    21300028: ScrollingText_14
-    21300030: ScrollingText_15
-    21300032: ScrollingText_16
-    21300034: ScrollingText_17
-    21300036: ScrollingText_18
-    21300038: ScrollingText_19
-    21300040: ScrollingText_20
-    21300042: ScrollingText_21
-    21300044: ScrollingText_22
-    21300046: ScrollingText_23
-    21300048: ScrollingText_24
-    21300050: ScrollingText_25
-    21300052: ScrollingText_26
-    21300054: ScrollingText_27
-    21300056: ScrollingText_28
-    21300058: ScrollingText_29
-    21300060: ScrollingText_30
-    21300062: ScrollingText_31
-    21300064: ScrollingText_32
-    21300066: ScrollingText_33
-    21300068: ScrollingText_34
-    21300070: ScrollingText_35
-  serializedVersion: 2
+    21300000: ScrollingText1_0
+    21300002: ScrollingText1_1
+    21300004: ScrollingText1_2
+    21300006: ScrollingText2_0
+    21300008: ScrollingText2_1
+    21300010: ScrollingText2_2
+    21300012: ScrollingText1_3
+    21300014: ScrollingText1_4
+    21300016: ScrollingText1_5
+    21300018: ScrollingText2_3
+    21300020: ScrollingText2_4
+    21300022: ScrollingText2_5
+    21300024: ScrollingText1_6
+    21300026: ScrollingText1_7
+    21300028: ScrollingText1_8
+    21300030: ScrollingText2_6
+    21300032: ScrollingText2_7
+    21300034: ScrollingText2_8
+    21300036: ScrollingText1_9
+    21300038: ScrollingText1_10
+    21300040: ScrollingText1_11
+    21300042: ScrollingText2_9
+    21300044: ScrollingText2_10
+    21300046: ScrollingText2_11
+    21300048: ScrollingText1_12
+    21300050: ScrollingText1_13
+    21300052: ScrollingText1_14
+    21300054: ScrollingText2_12
+    21300056: ScrollingText2_13
+    21300058: ScrollingText2_14
+    21300060: ScrollingText1_15
+    21300062: ScrollingText1_16
+    21300064: ScrollingText1_17
+    21300066: ScrollingText2_15
+    21300068: ScrollingText2_16
+    21300070: ScrollingText2_17
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -57,10 +57,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
@@ -71,9 +69,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
@@ -81,444 +77,489 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 5
-  buildTargetSettings: []
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ScrollingText_0
+      name: ScrollingText1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 1878.3334
         width: 681.6667
-        height: 169.66667
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_1
+      name: ScrollingText1_1
       rect:
         serializedVersion: 2
         x: 682
         y: 1878.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_2
+      name: ScrollingText1_2
       rect:
         serializedVersion: 2
         x: 1364
         y: 1878.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_3
+      name: ScrollingText2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1708.3334
-        width: 681.6667
-        height: 169.66667
+        y: 1708
+        width: 682
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_4
+      name: ScrollingText2_1
       rect:
         serializedVersion: 2
         x: 682
         y: 1708.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_5
+      name: ScrollingText2_2
       rect:
         serializedVersion: 2
         x: 1364
         y: 1708.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_6
+      name: ScrollingText1_3
       rect:
         serializedVersion: 2
         x: 0
         y: 1538.3334
         width: 681.6667
-        height: 169.66667
+        height: 169.66663
+      alignment: 0
+      pivot: {x: 0.5, y: 0.50000036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ScrollingText1_4
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1538
+        width: 682
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_7
+      name: ScrollingText1_5
       rect:
         serializedVersion: 2
-        x: 682
+        x: 1364
         y: 1538.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_8
-      rect:
-        serializedVersion: 2
-        x: 1364
-        y: 1538.3334
-        width: 681.6667
-        height: 169.66667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ScrollingText_9
+      name: ScrollingText2_3
       rect:
         serializedVersion: 2
         x: 0
         y: 1368.3334
         width: 681.6667
-        height: 169.66667
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_10
+      name: ScrollingText2_4
       rect:
         serializedVersion: 2
         x: 682
         y: 1368.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_11
+      name: ScrollingText2_5
       rect:
         serializedVersion: 2
         x: 1364
         y: 1368.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_12
+      name: ScrollingText1_6
       rect:
         serializedVersion: 2
         x: 0
         y: 1198.3334
         width: 681.6667
-        height: 169.66667
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_13
+      name: ScrollingText1_7
       rect:
         serializedVersion: 2
         x: 682
         y: 1198.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_14
+      name: ScrollingText1_8
       rect:
         serializedVersion: 2
         x: 1364
         y: 1198.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_15
+      name: ScrollingText2_6
       rect:
         serializedVersion: 2
         x: 0
         y: 1028.3334
         width: 681.6667
-        height: 169.66667
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_16
+      name: ScrollingText2_7
       rect:
         serializedVersion: 2
         x: 682
         y: 1028.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_17
+      name: ScrollingText2_8
       rect:
         serializedVersion: 2
         x: 1364
         y: 1028.3334
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.50000036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_18
+      name: ScrollingText1_9
       rect:
         serializedVersion: 2
         x: 0
         y: 858.3333
         width: 681.6667
-        height: 169.66667
+        height: 169.66669
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.49999982}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_19
+      name: ScrollingText1_10
       rect:
         serializedVersion: 2
         x: 682
         y: 858.3333
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66669
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.49999982}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_20
+      name: ScrollingText1_11
       rect:
         serializedVersion: 2
         x: 1364
         y: 858.3333
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66669
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.49999982}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_21
+      name: ScrollingText2_9
       rect:
         serializedVersion: 2
         x: 0
         y: 688.3333
         width: 681.6667
-        height: 169.66667
+        height: 169.66669
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.49999982}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_22
+      name: ScrollingText2_10
       rect:
         serializedVersion: 2
         x: 682
         y: 688.3333
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66669
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.49999982}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_23
+      name: ScrollingText2_11
       rect:
         serializedVersion: 2
         x: 1364
         y: 688.3333
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66669
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.49999982}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_24
+      name: ScrollingText1_12
       rect:
         serializedVersion: 2
         x: 0
         y: 518.3333
         width: 681.6667
-        height: 169.66667
+        height: 169.66669
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.49999982}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_25
+      name: ScrollingText1_13
       rect:
         serializedVersion: 2
         x: 682
-        y: 518.3333
-        width: 681.6667
-        height: 169.66667
+        y: 518
+        width: 682
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_26
+      name: ScrollingText1_14
       rect:
         serializedVersion: 2
-        x: 1364
-        y: 518.3333
-        width: 681.6667
-        height: 169.66667
+        x: 1366
+        y: 518
+        width: 682
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_27
+      name: ScrollingText2_12
       rect:
         serializedVersion: 2
         x: 0
         y: 348.3333
         width: 681.6667
-        height: 169.66667
+        height: 169.66669
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_28
+      name: ScrollingText2_13
       rect:
         serializedVersion: 2
         x: 682
         y: 348.3333
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66669
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_29
+      name: ScrollingText2_14
       rect:
         serializedVersion: 2
         x: 1364
         y: 348.3333
-        width: 681.6667
-        height: 169.66667
+        width: 681.66675
+        height: 169.66669
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_30
+      name: ScrollingText1_15
       rect:
         serializedVersion: 2
         x: 0
-        y: 178.33333
-        width: 681.6667
-        height: 169.66667
+        y: 178
+        width: 682
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_31
+      name: ScrollingText1_16
       rect:
         serializedVersion: 2
         x: 682
         y: 178.33333
-        width: 681.6667
+        width: 681.66675
         height: 169.66667
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.49999994}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_32
+      name: ScrollingText1_17
       rect:
         serializedVersion: 2
         x: 1364
         y: 178.33333
-        width: 681.6667
+        width: 681.66675
         height: 169.66667
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.49999994}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_33
+      name: ScrollingText2_15
       rect:
         serializedVersion: 2
         x: 0
@@ -531,12 +572,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_34
+      name: ScrollingText2_16
       rect:
         serializedVersion: 2
         x: 682
         y: 8.333328
-        width: 681.6667
+        width: 681.66675
         height: 169.66667
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -544,12 +585,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ScrollingText_35
+      name: ScrollingText2_17
       rect:
         serializedVersion: 2
         x: 1364
         y: 8.333328
-        width: 681.6667
+        width: 681.66675
         height: 169.66667
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
