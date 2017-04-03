@@ -16,10 +16,10 @@ public class AllConditions : ResettableScriptableObject
 		get
 		{
 			if (!instance)
-				instance = FindObjectOfType<AllConditions> ();
+				instance = FindObjectOfType<AllConditions>();
 			
 			if (!instance)
-				instance = Resources.Load<AllConditions> (loadPath);
+				instance = Resources.Load<AllConditions>(loadPath);
 			
 			if (!instance)
 				Debug.LogError ("AllConditions has not been created yet.  Go to Assets > Create > AllConditions.");

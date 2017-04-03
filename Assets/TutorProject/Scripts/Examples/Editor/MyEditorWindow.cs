@@ -5,6 +5,7 @@ using System.Collections;
 
 public class MyEditorWindow : EditorWindow
 {
+	
 	[MenuItem("My Menu/Show My Window")]
 	public static void ShowWindow()
 	{
