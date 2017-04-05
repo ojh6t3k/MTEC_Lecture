@@ -8,6 +8,7 @@ public class MyComponent : MonoBehaviour
 	public int intVariable;
 	public float floatVariable;
 	public GameObject[] gameObjectList;
+	public Texture2D image;
 
 	[SerializeField]
 	private int _intVar;

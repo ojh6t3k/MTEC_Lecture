@@ -45,5 +45,42 @@ public class MyComponentEditor : Editor
 			myComponent.DoSomething();
 			EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
 		}
+
+
+		GUILayout.Box(myComponent.image, GUILayout.Width(100), GUILayout.Height(100));
+
+		Event currentEvent = Event.current;
+		Rect rect = GUILayoutUtility.GetLastRect();
+		if(rect.Contains(currentEvent.mousePosition))
+		{
+			switch (currentEvent.type)
+			{
+			case EventType.DragUpdated:
+				DragAndDrop.visualMode = IsDragValid() ? DragAndDropVisualMode.Link : DragAndDropVisualMode.Rejected;
+				currentEvent.Use();
+				break;
+
+			case EventType.DragPerform:
+				DragAndDrop.AcceptDrag();
+
+				for (int i = 0; i < DragAndDrop.objectReferences.Length; i++)
+				{
+					myComponent.image = DragAndDrop.objectReferences[i] as Texture2D;
+				}
+				currentEvent.Use();
+				break;
+			}
+		}
+	}
+
+	bool IsDragValid()
+	{
+		for (int i = 0; i < DragAndDrop.objectReferences.Length; i++)
+		{
+			if (DragAndDrop.objectReferences[i].GetType() != typeof(Texture2D))
+				return false;
+		}
+
+		return true;
 	}
 }
