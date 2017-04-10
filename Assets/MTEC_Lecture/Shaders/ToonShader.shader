@@ -1,4 +1,6 @@
-﻿Shader "Custom/ToonShader" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/ToonShader" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_SpecularPower("Specular Power", Range(0.0,1.0)) = 0.01
@@ -48,7 +50,7 @@
 					{
 						v2f o;
 			#if OUTLINE_FRONT
-						o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+						o.pos = UnityObjectToClipPos(v.vertex);
 
 						float3 norm = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal);
 						float2 offset = TransformViewToProjection(norm.xy);

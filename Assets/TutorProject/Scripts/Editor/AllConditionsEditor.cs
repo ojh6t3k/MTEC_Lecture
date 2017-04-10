@@ -17,7 +17,7 @@ public class AllConditionsEditor : Editor
 
 
 	[MenuItem("Assets/Create/AllConditions")]
-	private static void CreateTutorAllConditionsAsset()
+	private static void CreateAllConditionsAsset()
 	{
 		if(AllConditions.Instance)
 			return;
