@@ -9,13 +9,16 @@ public class PlayerMovement : MonoBehaviour
 {
 	public Animator animator;
 	public NavMeshAgent agent;
+	public SaveData playerSaveData;
 	public float turnSmoothing = 15f;
 	public float speedDampTime = 0.1f;
 	public float slowingSpeed = 0.175f;
 	public float turnSpeedThreshold = 0.5f;
+	public float inputHoldDelay = 0.5f;
 
 	private readonly int hashSpeedPara = Animator.StringToHash("Speed");
 	private readonly int hashLocomotionTag = Animator.StringToHash("Locomotion");
+	public const string startingPositionKey = "starting position";
 	private const float navMeshSampleDistance = 4f;
 	private const float stopDistanceProportion = 0.1f;
 
@@ -28,6 +31,15 @@ public class PlayerMovement : MonoBehaviour
 	void Start ()
 	{
 		agent.updateRotation = false;
+
+		inputHoldWait = new WaitForSeconds (inputHoldDelay);
+
+		string startingPositionName = "";
+		playerSaveData.Load(startingPositionKey, ref startingPositionName);
+		Transform startingPosition = StartingPosition.FindStartingPosition(startingPositionName);
+
+		transform.position = startingPosition.position;
+		transform.rotation = startingPosition.rotation;
 
 		destinationPosition = transform.position;
 	}
